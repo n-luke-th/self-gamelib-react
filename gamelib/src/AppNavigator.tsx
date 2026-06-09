@@ -27,37 +27,41 @@ export const AppNavigator = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route path="/" index element={<App />}></Route>
+        <Route
+          path="/"
+          index
+          element={<App />}
+        ></Route>
         <Route
           path={`details/id=${selected}`}
           element={
             <GameDetails
               id={game.id}
               title={game.title}
-              thumbnail={""}
-              status={""}
-              short_description={""}
-              description={""}
-              game_url={""}
-              genre={""}
-              platform={""}
-              publisher={""}
-              developer={""}
-              release_date={""}
-              freetogame_profile_url={""}
+              thumbnail={game.thumbnail}
+              status={game.status}
+              short_description={game.short_description}
+              description={game.description}
+              game_url={game.game_url}
+              genre={game.genre}
+              platform={game.platform}
+              publisher={game.publisher}
+              developer={game.developer}
+              release_date={game.release_date}
+              freetogame_profile_url={game.freetogame_profile_url}
               minimum_system_requirements={{
-                os: "",
-                processor: "",
-                memory: "",
-                graphics: "",
-                storage: "",
+                os: game.minimum_system_requirements.os,
+                processor: game.minimum_system_requirements.processor,
+                memory: game.minimum_system_requirements.memory,
+                graphics: game.minimum_system_requirements.graphics,
+                storage: game.minimum_system_requirements.storage,
               }}
-              screenshots={[]}
+              screenshots={[...game.screenshots]}
             ></GameDetails>
           }
         ></Route>
-      </>
-    )
+      </>,
+    ),
   );
 
   return (

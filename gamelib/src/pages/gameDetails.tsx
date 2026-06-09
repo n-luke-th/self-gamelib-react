@@ -1,3 +1,4 @@
+import noIMG from "../assets/noimg.svg";
 export interface GameDetailsProps {
   id: number;
   title: string;
@@ -28,8 +29,26 @@ export interface GameDetailsProps {
 const GameDetails = (game: GameDetailsProps) => {
   return (
     <div className="games-details">
+      <div className="card-img">
+        <img
+          src={game.thumbnail == "" ? noIMG : game.thumbnail}
+          loading="lazy"
+          alt={game.title.concat("'s thumbnail")}
+          style={{
+            width: game.thumbnail == "" ? "222px" : "100%",
+          }}
+        />
+      </div>
       <h1>{game.title}</h1>
-      <h3>{game.id}</h3>
+      <h5>{game.short_description}</h5>
+      <p>{game.description}</p>
+      <a
+        href={game.game_url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Play Game
+      </a>
     </div>
   );
 };
