@@ -50,13 +50,13 @@ export const AppNavigator = () => {
               release_date={game.release_date}
               freetogame_profile_url={game.freetogame_profile_url}
               minimum_system_requirements={{
-                os: game.minimum_system_requirements.os,
-                processor: game.minimum_system_requirements.processor,
-                memory: game.minimum_system_requirements.memory,
-                graphics: game.minimum_system_requirements.graphics,
-                storage: game.minimum_system_requirements.storage,
+                os: "",
+                processor: "",
+                memory: "",
+                graphics: "",
+                storage: "",
               }}
-              screenshots={[...game.screenshots]}
+              screenshots={game.screenshots}
             ></GameDetails>
           }
         ></Route>

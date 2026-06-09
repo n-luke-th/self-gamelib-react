@@ -33,7 +33,11 @@ const GameDetails = (game: GameDetailsProps) => {
         <img
           src={game.thumbnail == "" ? noIMG : game.thumbnail}
           loading="lazy"
-          alt={game.title.concat("'s thumbnail")}
+          alt={
+            typeof game.title === "string"
+              ? game.title.concat("'s thumbnail")
+              : "game thumbnail"
+          }
           style={{
             width: game.thumbnail == "" ? "222px" : "100%",
           }}

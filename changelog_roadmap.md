@@ -26,3 +26,4 @@ You can see the expected feature in the future launches in [Roadmap section](#ro
 | 7th           | 0.0.7   | able to show details + implement cookies banner                         |
 | 8th           | 0.0.8   | show details beautifully is in progress + cookies notice only show once |
 | 9th           | 0.0.9   | enhance game details page and update dependencies                       |
+| 10th          | 0.0.10  | fix handling empty game details and improve thumbnail alt text          |
